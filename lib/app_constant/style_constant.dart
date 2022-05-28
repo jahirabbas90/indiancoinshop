@@ -2,16 +2,20 @@ import 'package:flutter/material.dart';
 
 class StyleConstants {
   static const int colorRedHexCode = 0xFF205882;
-  static const int colorGrayHexCode = 0xFFE8E8E8;
+  static const int colorGrayHexCode = 0xFF62473a;
   static const int colorBlackHexCode = 0xFF303030;
   static const int colorLightBlackHexCode = 0xFF707070;
   static const int colorWhiteHexCode = 0xFFFFFFFF;
   static const int colorNeutralGreyHexCode = 0xFF9098B1;
+  static const int colorLoginHexCode = 0xFFebf7f8;
   static const int colorOrangeHexCode = 0xFFFF9110;
   static const int colorBlackCode = 0xFF000000;
   static const int colorGreen = 0xFF00a647;
   static const int greyBack = 0xFFF4F4F4;
   static const int red = 0xFFe43f3f;
+  static const int blue = 0xFF1f5786;
+  static const int yellow = 0xFFdb8d0d;
+  static const int yellow_border = 0xFFdb8d0d;
 
   static const MaterialColor swatchRed = MaterialColor(
     colorRedHexCode,
@@ -59,7 +63,21 @@ class StyleConstants {
       900: Color(colorGrayHexCode),
     },
   );
-
+  static const MaterialColor buttonColor = MaterialColor(
+    blue,
+    {
+      50: Color(blue),
+      100: Color(blue),
+      200: Color(blue),
+      300: Color(blue),
+      400: Color(blue),
+      500: Color(blue),
+      600: Color(blue),
+      700: Color(blue),
+      800: Color(blue),
+      900: Color(blue),
+    },
+  );
   static const MaterialColor swatchBlack = MaterialColor(
     colorBlackHexCode,
     {
@@ -169,7 +187,8 @@ class StyleConstants {
       800: Color(colorGreen),
       900: Color(colorGreen),
     },
-  );static const MaterialColor grey = MaterialColor(
+  );
+  static const MaterialColor grey = MaterialColor(
     greyBack,
     {
       50: Color(greyBack),
@@ -182,6 +201,51 @@ class StyleConstants {
       700: Color(greyBack),
       800: Color(greyBack),
       900: Color(greyBack),
+    },
+  );
+  static const MaterialColor yellow_button = MaterialColor(
+    yellow,
+    {
+      50: Color(yellow),
+      100: Color(yellow),
+      200: Color(yellow),
+      300: Color(yellow),
+      400: Color(yellow),
+      500: Color(yellow),
+      600: Color(yellow),
+      700: Color(yellow),
+      800: Color(yellow),
+      900: Color(yellow),
+    },
+  );
+  static const MaterialColor login_back_color = MaterialColor(
+    colorLoginHexCode,
+    {
+      50: Color(colorLoginHexCode),
+      100: Color(colorLoginHexCode),
+      200: Color(colorLoginHexCode),
+      300: Color(colorLoginHexCode),
+      400: Color(colorLoginHexCode),
+      500: Color(colorLoginHexCode),
+      600: Color(colorLoginHexCode),
+      700: Color(colorLoginHexCode),
+      800: Color(colorLoginHexCode),
+      900: Color(colorLoginHexCode),
+    },
+  );
+  static const MaterialColor yellow_button_border = MaterialColor(
+    yellow_border,
+    {
+      50: Color(yellow_border),
+      100: Color(yellow_border),
+      200: Color(yellow_border),
+      300: Color(yellow_border),
+      400: Color(yellow_border),
+      500: Color(yellow_border),
+      600: Color(yellow_border),
+      700: Color(yellow_border),
+      800: Color(yellow_border),
+      900: Color(yellow_border),
     },
   );
 }

@@ -3,7 +3,10 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:get_it_mixin/get_it_mixin.dart';
 import 'package:indian_coin_shop/home_page/home_screen_main.dart';
+import 'package:indian_coin_shop/home_page/managers/homefeed_manager.dart';
+import 'package:indian_coin_shop/login_page/login_view.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -11,13 +14,13 @@ String notificationTitle = 'No Title';
 String notificationBody = 'No Body';
 String notificationData = 'No Data';
 
-class SplashScreen extends StatefulWidget{
+class SplashScreen extends StatefulWidget with GetItStatefulWidgetMixin{
 
   @override
   _SplashScreenState createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen>{
+class _SplashScreenState extends State<SplashScreen> with GetItStateMixin{
   List _posts = [];
 
 
@@ -32,6 +35,8 @@ class _SplashScreenState extends State<SplashScreen>{
 
     super.initState();
     getData();
+    get<HomeFeedManager>().homefeedData.execute();
+
   }
   _changeData(String msg) => setState(() => notificationData = msg);
   _changeBody(String msg) => setState(() => notificationBody = msg);
@@ -74,7 +79,7 @@ class _SplashScreenState extends State<SplashScreen>{
         if(myList.length>0){
           Navigator.push(context, PageTransition(type: PageTransitionType.leftToRight, child: HomePage()));
         }else{
-          Navigator.push(context, PageTransition(type: PageTransitionType.leftToRight, child: HomePage()));
+          Navigator.push(context, PageTransition(type: PageTransitionType.leftToRight, child: LoginPage()));
         }
       },
     );
