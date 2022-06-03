@@ -75,6 +75,7 @@ dependencies:
   url_launcher: ^6.0.0-nullsafety
   change_app_package_name: ^1.0.0
   multilevel_drawer: ^2.0.0
+  sliding_up_panel: ^2.0.0+1
 
 dev_dependencies:
   flutter_test:

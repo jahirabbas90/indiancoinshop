@@ -8,6 +8,7 @@ class ApiConstants {
   static Uri homeNewsFeedUri = Uri.parse('$baseUrl/$apiVersion/home');
   static Uri fullNewsFeedUri = Uri.parse('$baseUrl/$apiVersion/fullview');
   static Uri tagsFeedUri = Uri.parse('$baseUrl/$apiVersion/tags-search');
+  static Uri change_password_endpoint = Uri.parse('$baseUrl/$apiVersion/change-password');
 
   static const String NEWS_TITLE="";
   static const String NEWS_IMAGE="";

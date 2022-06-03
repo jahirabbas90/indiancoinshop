@@ -289,7 +289,38 @@ class CartView extends StatelessWidget {
                 ],
               ),
 
-
+              Container(
+                height: 50,
+                width: double.infinity,
+                margin: const EdgeInsets.only(
+                    top: 8.0, bottom: 8.0),
+                decoration: BoxDecoration(
+                    border: Border.all(color: StyleConstants.green,
+                        width: 2.0),
+                    gradient: const LinearGradient(
+                      begin: Alignment.centerLeft,
+                      end: Alignment.centerRight,
+                      colors: <Color>[
+                        StyleConstants.green,
+                        StyleConstants.green,
+                      ],
+                    ),
+                    borderRadius: BorderRadius.circular(6)),
+                child: FlatButton(
+                  onPressed: () {
+                  },
+                  child: Text(
+                    "Proceed to checkout",
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: GoogleFonts.josefinSans(
+                      fontSize: 16.0,
+                      color: StyleConstants.colorWhite,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),

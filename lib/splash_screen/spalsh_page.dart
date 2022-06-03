@@ -65,18 +65,15 @@ class _SplashScreenState extends State<SplashScreen> with GetItStateMixin{
 
   getData() async {
     late List<int> myList=[];
-    SharedPreferences pref = await SharedPreferences.getInstance();
-    List<String> mList = (pref.getStringList('cat_list_selection') ?? <String>[]);
-    List<int> mOriginaList = mList.map((i)=> int.parse(i)).toList();
-    //print(mOriginaList);
-    myList=mOriginaList;
-    print("posts : ${myList}");
+    SharedPreferences prefs=await SharedPreferences.getInstance();
+    String accessToken = prefs.getString('access_token') ?? '';
+    print("posts : ${accessToken}");
 
     Timer(
       Duration(seconds: 5),
           (){
         //Navigator.push(context, PageTransition(type: PageTransitionType.leftToRight, child: CustomLandingPage()));
-        if(myList.length>0){
+        if(accessToken.isNotEmpty){
           Navigator.push(context, PageTransition(type: PageTransitionType.leftToRight, child: HomePage()));
         }else{
           Navigator.push(context, PageTransition(type: PageTransitionType.leftToRight, child: LoginPage()));
